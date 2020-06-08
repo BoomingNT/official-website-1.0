@@ -2726,7 +2726,7 @@ export default {
     text-align: center;
   }
   .el-dialog__body {
-    height: 600rem;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2739,12 +2739,14 @@ export default {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    margin-bottom: 15vh;
     margin: 5vh !important;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     height: 90vh;
     .dialog_carousel {
       width: 80%;
-      height: 85vh;
+      height: 80vh;
       .el-carousel {
         height: 100%;
         .el-carousel__container {
