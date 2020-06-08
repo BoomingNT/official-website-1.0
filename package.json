@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "element-ui": "^2.13.2",
+    "vant": "^2.8.4",
+    "vue": "^2.6.11",
+    "vue-keep-scroll-position": "^0.1.2",
+    "vue-router": "^3.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
@@ -18,6 +22,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.11.2",
+    "less-loader": "^6.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -38,5 +44,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` yarn install ```",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
 }
