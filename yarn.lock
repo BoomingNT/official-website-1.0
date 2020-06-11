@@ -4884,10 +4884,27 @@ less-loader@^6.1.0:
     loader-utils "^2.0.0"
     schema-utils "^2.6.6"
 
-less@^3.11.1, less@^3.11.2:
+less@^3.11.1:
   version "3.11.2"
   resolved "https://registry.npm.taobao.org/less/download/less-3.11.2.tgz#51a484e9017287f5ac3db921cb86970eb7506e81"
   integrity sha1-UaSE6QFyh/WsPbkhy4aXDrdQboE=
+  dependencies:
+    clone "^2.1.2"
+    tslib "^1.10.0"
+  optionalDependencies:
+    errno "^0.1.1"
+    graceful-fs "^4.1.2"
+    image-size "~0.5.0"
+    make-dir "^2.1.0"
+    mime "^1.4.1"
+    promise "^7.1.1"
+    request "^2.83.0"
+    source-map "~0.6.0"
+
+less@^3.11.3:
+  version "3.11.3"
+  resolved "https://registry.npm.taobao.org/less/download/less-3.11.3.tgz?cache=0&sync_timestamp=1591383580844&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fless%2Fdownload%2Fless-3.11.3.tgz#2d853954fcfe0169a8af869620bcaa16563dcc1c"
+  integrity sha1-LYU5VPz+AWmor4aWILyqFlY9zBw=
   dependencies:
     clone "^2.1.2"
     tslib "^1.10.0"
@@ -8017,6 +8034,11 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+vconsole@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.npm.taobao.org/vconsole/download/vconsole-3.3.4.tgz#a7dacd8887b3d3e902e8d18425cda56c34e77f51"
+  integrity sha1-p9rNiIez0+kC6NGEJc2lbDTnf1E=
 
 vendors@^1.0.0:
   version "1.0.4"

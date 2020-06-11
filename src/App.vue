@@ -1,25 +1,26 @@
 <template>
   <div ref="all" class="all">
     <!-- 首页PC -->
-    <div class="home">
-      <img class="login img" src="./assets/h5/logosss.jpg" alt />
-      <div class="right">
-        <span @click="home($event)" :class="home_colo?'bgcColo':''">首页</span>
-        <span @click="techon" :class="techon_colo?'bgcColo':''">技术应用</span>
-        <span @click="clcase" :class="clcase_colo?'bgcColo':''">实用案例</span>
-        <span @click="about" :class="about_colo?'bgcColo':''">关于我们</span>
-        <span @click="footer" :class="footer_colo?'bgcColo':''">联系我们</span>
+    <div class="nav">
+      <div class="home">
+        <img class="login img" src="./assets/logo.gif" alt />
+        <div class="right">
+          <span @click="home($event)" :class="home_colo?'bgcColo':''">首页</span>
+          <span @click="techon" :class="techon_colo?'bgcColo':''">技术应用</span>
+          <span @click="clcase" :class="clcase_colo?'bgcColo':''">实用案例</span>
+          <span @click="about" :class="about_colo?'bgcColo':''">关于我们</span>
+          <span @click="footer" :class="footer_colo?'bgcColo':''">联系我们</span>
+        </div>
       </div>
     </div>
-
     <!-- H5 -->
     <div class="home_h5">
-      <img class="login img" src="./assets/h5/logosss.jpg" alt />
+      <img class="login img" src="./assets/logosss.gif" alt />
       <el-dropdown trigger="click" size="medium">
         <el-button class="el-dropdown-link" icon="el-icon-s-fold"></el-button>
         <el-dropdown-menu slot="dropdown" style="margin-top:10rem;margin-right:-10rem">
           <el-dropdown-item>
-            <span @click="home($event)">首页</span>
+            <span @click="home">首页</span>
           </el-dropdown-item>
           <el-dropdown-item>
             <span @click="techon_h5">技术应用</span>
@@ -52,10 +53,10 @@
     <div class="swipe">
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item>
-          <img class="content img" src="./assets/h5/banner_01.jpg" alt />
+          <img class="content img" src="./assets/banner_01.jpg" alt />
         </van-swipe-item>
         <van-swipe-item>
-          <img class="content img" src="./assets/h5/banner_02.jpg" alt />
+          <img class="content img" src="./assets/banner_02.jpg" alt />
         </van-swipe-item>
       </van-swipe>
     </div>
@@ -179,18 +180,18 @@
       <div class="techon_content">
         <!-- 模块一 -->
         <van-cell @click="showPopup1" class="techon_content_one">
-          <img class="img" src="./assets/h5/ls_09.gif" alt />
+          <img class="img" src="./assets/ls_09.gif" alt />
           <div class="techon_content_one_p">脸部识别</div>
         </van-cell>
         <van-popup v-model="flag1">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_09.gif" alt />
+              <img class="img" src="./assets/ls_09.gif" alt />
               <p class="pop_p">脸部识别</p>
               <span class="pop_span">透过识别人脸比例和轮廓，去识别个人身份根据识别身份及指令，再将数据发送到连接不同设备,可广泛地在不同场所运行。</span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_11.gif" alt />
+              <img class="img" src="./assets/ls_11.gif" alt />
               <p class="pop_p">自助入住机</p>
               <span class="pop_span">
                 在酒店大堂，可以进行自助入住手续，自助入住机要
@@ -199,7 +200,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_14.gif" alt />
+              <img class="img" src="./assets/ls_14.gif" alt />
               <p class="pop_p">机器人</p>
               <span class="pop_span">
                 不同埸合派送不同机械人，带路机械人、送物资、
@@ -207,7 +208,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_20.gif" alt />
+              <img class="img" src="./assets/ls_20.gif" alt />
               <p class="pop_p">会议系统</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -216,7 +217,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_23.gif" alt />
+              <img class="img" src="./assets/ls_23.gif" alt />
               <p class="pop_p">电视机信息推送</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -225,7 +226,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_25.jpg" alt />
+              <img class="img" src="./assets/ls_25.jpg" alt />
               <p class="pop_p">智能停车场</p>
               <span class="pop_span">
                 停车场采用拼图型智慧泊车系统，机械式装置、
@@ -237,28 +238,28 @@
         </van-popup>
         <!-- 模块二 -->
         <van-cell @click="showPopup2" class="techon_content_one">
-          <img class="img" src="./assets/h5/ls_11.gif" alt />
+          <img class="img" src="./assets/ls_11.gif" alt />
           <div class="techon_content_one_p">自助入住机</div>
         </van-cell>
         <van-popup v-model="flag2">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_11.gif" alt />
+              <img class="img" src="./assets/ls_11.gif" alt />
               <p class="pop_p">自助入住机</p>
               <span class="pop_span">在酒店大堂，可以进行自助入住手续，自助入住机要刷身分证及脸部识别。可以缩减入住时间，将科技生活化。</span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_14.gif" alt />
+              <img class="img" src="./assets/ls_14.gif" alt />
               <p class="pop_p">机器人</p>
               <span class="pop_span">不同埸合派送不同机械人，带路机械人、送物资、送餐机械人，如果有需要机械人可送上门。</span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_20.gif" alt />
+              <img class="img" src="./assets/ls_20.gif" alt />
               <p class="pop_p">会议系统</p>
               <span class="pop_span">提供一站式会议方案包括大屏显示，矩阵切换、集中控制、数字会议、视频会议、IP电话等等，专业地因应不同场合私人订制方案。</span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_23.gif" alt />
+              <img class="img" src="./assets/ls_23.gif" alt />
               <p class="pop_p">电视机信息推送</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -267,7 +268,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_25.jpg" alt />
+              <img class="img" src="./assets/ls_25.jpg" alt />
               <p class="pop_p">智能停车场</p>
               <span class="pop_span">
                 停车场采用拼图型智慧泊车系统，机械式装置、
@@ -276,7 +277,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_09.gif" alt />
+              <img class="img" src="./assets/ls_09.gif" alt />
               <p class="pop_p">脸部识别</p>
               <span class="pop_span">透过识别人脸比例和轮廓，去识别个人身份根据识别身份及指令，再将数据发送到连接不同设备,可广泛地在不同场所运行。</span>
             </van-swipe-item>
@@ -284,13 +285,13 @@
         </van-popup>
         <!-- 模块三 -->
         <van-cell @click="showPopup3" class="techon_content_one">
-          <img class="img" src="./assets/h5/ls_14.gif" alt />
+          <img class="img" src="./assets/ls_14.gif" alt />
           <div class="techon_content_one_p">机器人</div>
         </van-cell>
         <van-popup v-model="flag3">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_14.gif" alt />
+              <img class="img" src="./assets/ls_14.gif" alt />
               <p class="pop_p">机器人</p>
               <span class="pop_span">
                 不同埸合派送不同机械人，带路机械人、送物资、
@@ -298,7 +299,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_20.gif" alt />
+              <img class="img" src="./assets/ls_20.gif" alt />
               <p class="pop_p">会议系统</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -307,7 +308,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_23.gif" alt />
+              <img class="img" src="./assets/ls_23.gif" alt />
               <p class="pop_p">电视机信息推送</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -316,7 +317,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_25.jpg" alt />
+              <img class="img" src="./assets/ls_25.jpg" alt />
               <p class="pop_p">智能停车场</p>
               <span class="pop_span">
                 停车场采用拼图型智慧泊车系统，机械式装置、
@@ -325,12 +326,12 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_09.gif" alt />
+              <img class="img" src="./assets/ls_09.gif" alt />
               <p class="pop_p">脸部识别</p>
               <span class="pop_span">透过识别人脸比例和轮廓，去识别个人身份根据识别身份及指令，再将数据发送到连接不同设备,可广泛地在不同场所运行。</span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_11.gif" alt />
+              <img class="img" src="./assets/ls_11.gif" alt />
               <p class="pop_p">自助入住机</p>
               <span class="pop_span">
                 在酒店大堂，可以进行自助入住手续，自助入住机要
@@ -342,13 +343,13 @@
         </van-popup>
         <!-- 模块四 -->
         <van-cell @click="showPopup4" class="techon_content_one">
-          <img class="img" src="./assets/h5/ls_20.gif" alt />
+          <img class="img" src="./assets/ls_20.gif" alt />
           <div class="techon_content_one_p">会议系统</div>
         </van-cell>
         <van-popup v-model="flag4">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_20.gif" alt />
+              <img class="img" src="./assets/ls_20.gif" alt />
               <p class="pop_p">会议系统</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -357,7 +358,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_23.gif" alt />
+              <img class="img" src="./assets/ls_23.gif" alt />
               <p class="pop_p">电视机信息推送</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -366,7 +367,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_25.jpg" alt />
+              <img class="img" src="./assets/ls_25.jpg" alt />
               <p class="pop_p">智能停车场</p>
               <span class="pop_span">
                 停车场采用拼图型智慧泊车系统，机械式装置、
@@ -375,12 +376,12 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_09.gif" alt />
+              <img class="img" src="./assets/ls_09.gif" alt />
               <p class="pop_p">脸部识别</p>
               <span class="pop_span">透过识别人脸比例和轮廓，去识别个人身份根据识别身份及指令，再将数据发送到连接不同设备,可广泛地在不同场所运行。</span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_11.gif" alt />
+              <img class="img" src="./assets/ls_11.gif" alt />
               <p class="pop_p">自助入住机</p>
               <span class="pop_span">
                 在酒店大堂，可以进行自助入住手续，自助入住机要
@@ -389,7 +390,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_14.gif" alt />
+              <img class="img" src="./assets/ls_14.gif" alt />
               <p class="pop_p">机器人</p>
               <span class="pop_span">
                 不同埸合派送不同机械人，带路机械人、送物资、
@@ -400,13 +401,13 @@
         </van-popup>
         <!-- 模块五 -->
         <van-cell @click="showPopup5" class="techon_content_one">
-          <img class="img" src="./assets/h5/ls_23.gif" alt />
+          <img class="img" src="./assets/ls_23.gif" alt />
           <div class="techon_content_one_p">电视机信息推送</div>
         </van-cell>
         <van-popup v-model="flag5">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_23.gif" alt />
+              <img class="img" src="./assets/ls_23.gif" alt />
               <p class="pop_p">电视机信息推送</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -415,7 +416,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_25.jpg" alt />
+              <img class="img" src="./assets/ls_25.jpg" alt />
               <p class="pop_p">智能停车场</p>
               <span class="pop_span">
                 停车场采用拼图型智慧泊车系统，机械式装置、
@@ -424,12 +425,12 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_09.gif" alt />
+              <img class="img" src="./assets/ls_09.gif" alt />
               <p class="pop_p">脸部识别</p>
               <span class="pop_span">透过识别人脸比例和轮廓，去识别个人身份根据识别身份及指令，再将数据发送到连接不同设备,可广泛地在不同场所运行。</span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_11.gif" alt />
+              <img class="img" src="./assets/ls_11.gif" alt />
               <p class="pop_p">自助入住机</p>
               <span class="pop_span">
                 在酒店大堂，可以进行自助入住手续，自助入住机要
@@ -438,7 +439,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_14.gif" alt />
+              <img class="img" src="./assets/ls_14.gif" alt />
               <p class="pop_p">机器人</p>
               <span class="pop_span">
                 不同埸合派送不同机械人，带路机械人、送物资、
@@ -446,7 +447,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_20.gif" alt />
+              <img class="img" src="./assets/ls_20.gif" alt />
               <p class="pop_p">会议系统</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -458,14 +459,14 @@
         </van-popup>
         <!-- 模块六 -->
         <van-cell @click="showPopup6" class="techon_content_one">
-          <img class="img" src="./assets/h5/ls_25.jpg" alt />
+          <img class="img" src="./assets/ls_25.jpg" alt />
           <div class="techon_content_one_p">智能停车场</div>
         </van-cell>
 
         <van-popup v-model="flag6">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_25.jpg" alt />
+              <img class="img" src="./assets/ls_25.jpg" alt />
               <p class="pop_p">智能停车场</p>
               <span class="pop_span">
                 停车场采用拼图型智慧泊车系统，机械式装置、
@@ -474,12 +475,12 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_09.gif" alt />
+              <img class="img" src="./assets/ls_09.gif" alt />
               <p class="pop_p">脸部识别</p>
               <span class="pop_span">透过识别人脸比例和轮廓，去识别个人身份根据识别身份及指令，再将数据发送到连接不同设备,可广泛地在不同场所运行。</span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_11.gif" alt />
+              <img class="img" src="./assets/ls_11.gif" alt />
               <p class="pop_p">自助入住机</p>
               <span class="pop_span">
                 在酒店大堂，可以进行自助入住手续，自助入住机要
@@ -488,7 +489,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_14.gif" alt />
+              <img class="img" src="./assets/ls_14.gif" alt />
               <p class="pop_p">机器人</p>
               <span class="pop_span">
                 不同埸合派送不同机械人，带路机械人、送物资、
@@ -497,7 +498,7 @@
             </van-swipe-item>
             <!-- 3 -->
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_20.gif" alt />
+              <img class="img" src="./assets/ls_20.gif" alt />
               <p class="pop_p">会议系统</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -506,7 +507,7 @@
               </span>
             </van-swipe-item>
             <van-swipe-item>
-              <img class="img" src="./assets/h5/ls_23.gif" alt />
+              <img class="img" src="./assets/ls_23.gif" alt />
               <p class="pop_p">电视机信息推送</p>
               <span class="pop_span">
                 提供一站式会议方案包括大屏显示，矩阵切换、集中控制、
@@ -619,7 +620,7 @@
           <div class="xin">
             <div class="xin_left">
               <div class="case_right">
-                <img class="img" src="./assets/h5/img_01.jpg" alt />
+                <img class="img" src="./assets/img_01.jpg" alt />
               </div>
             </div>
           </div>
@@ -639,7 +640,7 @@
           <div class="xin">
             <div class="xin_left">
               <div class="case_right">
-                <img class="img" src="./assets/h5/img_02.jpg" alt />
+                <img class="img" src="./assets/img_02.jpg" alt />
               </div>
             </div>
           </div>
@@ -657,7 +658,7 @@
           <div class="xin">
             <div class="xin_left">
               <div class="case_right">
-                <img class="img" src="./assets/h5/img_03.jpg" alt />
+                <img class="img" src="./assets/img_03.jpg" alt />
               </div>
             </div>
           </div>
@@ -760,7 +761,7 @@
           </li>
         </ul>
         <ul class="about_content_three">
-          <img class="img" src="./assets/h5/ls_31.png" alt />
+          <img class="img" src="./assets/ls_31.png" alt />
         </ul>
         <ul class="about_content_four">
           <li>
@@ -794,7 +795,7 @@
               <p>国际BQC认证</p>
               <div class="xin_top_img">
                 <img @click="interOne_cl(4)" class="img" src="./assets/ls_42.gif" alt />
-                <img @click="interOne_cl(5)" class="img" src="./assets/ls_45.jpg" alt />
+                <img @click="interOne_cl(5)" class="img" src="./assets/ls_45.gif" alt />
               </div>
             </div>
             <div class="bottom"></div>
@@ -806,162 +807,162 @@
     <div class="internation_h5 national">
       <div class="internation_national" @click="clickMore">
         <p>国际BQC认证</p>
-        <van-icon name="arrow-down" />
+        <van-icon class="van_bqc" name="arrow-down" />
       </div>
       <div class="internation_list" v-show="showFlag">
         <!-- 图一 -->
         <van-cell @click="showPopup11" class="tinternation_img">
-          <img src="./assets/h5/ls_34.jpg" alt />
+          <img src="./assets/ls_34.gif" alt />
         </van-cell>
         <van-popup v-model="flag11" class="tinternation_detail">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img src="./assets/h5/ls_34.jpg" alt />
+              <img src="./assets/big_img/ls_34.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_36.jpg" alt />
+              <img src="./assets/big_img/ls_36.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_38.jpg" alt />
+              <img src="./assets/big_img/ls_38.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_40.jpg" alt />
+              <img src="./assets/big_img/ls_40.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_42.jpg" alt />
+              <img src="./assets/big_img/ls_42.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_45.jpg" alt />
+              <img src="./assets/big_img/ls_45.jpg" alt />
             </van-swipe-item>
           </van-swipe>
         </van-popup>
         <!-- 图二 -->
         <van-cell @click="showPopup12" class="tinternation_img">
-          <img src="./assets/h5/ls_36.jpg" alt />
+          <img src="./assets/ls_36.gif" alt />
         </van-cell>
         <van-popup v-model="flag12" class="tinternation_detail">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img src="./assets/h5/ls_36.jpg" alt />
+              <img src="./assets/big_img/ls_36.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_38.jpg" alt />
+              <img src="./assets/big_img/ls_38.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_40.jpg" alt />
+              <img src="./assets/big_img/ls_40.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_42.jpg" alt />
+              <img src="./assets/big_img/ls_42.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_45.jpg" alt />
+              <img src="./assets/big_img/ls_45.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_34.jpg" alt />
+              <img src="./assets/big_img/ls_34.jpg" alt />
             </van-swipe-item>
           </van-swipe>
         </van-popup>
         <!-- 图三 -->
         <van-cell @click="showPopup13" class="tinternation_img">
-          <img src="./assets/h5/ls_38.jpg" alt />
+          <img src="./assets/ls_38.gif" alt />
         </van-cell>
         <van-popup v-model="flag13" class="tinternation_detail">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img src="./assets/h5/ls_38.jpg" alt />
+              <img src="./assets/big_img/ls_38.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_40.jpg" alt />
+              <img src="./assets/big_img/ls_40.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_42.jpg" alt />
+              <img src="./assets/big_img/ls_42.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_45.jpg" alt />
+              <img src="./assets/big_img/ls_45.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_34.jpg" alt />
+              <img src="./assets/big_img/ls_34.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_36.jpg" alt />
+              <img src="./assets/big_img/ls_36.jpg" alt />
             </van-swipe-item>
           </van-swipe>
         </van-popup>
         <!-- 图五 -->
         <van-cell @click="showPopup15" class="tinternation_img">
-          <img src="./assets/h5/ls_42.jpg" alt />
+          <img src="./assets/ls_42.gif" alt />
         </van-cell>
         <van-popup v-model="flag15" class="tinternation_detail">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img src="./assets/h5/ls_42.jpg" alt />
+              <img src="./assets/big_img/ls_42.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_45.jpg" alt />
+              <img src="./assets/big_img/ls_45.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_34.jpg" alt />
+              <img src="./assets/big_img/ls_34.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_36.jpg" alt />
+              <img src="./assets/big_img/ls_36.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_38.jpg" alt />
+              <img src="./assets/big_img/ls_38.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_40.jpg" alt />
+              <img src="./assets/big_img/ls_40.jpg" alt />
             </van-swipe-item>
           </van-swipe>
         </van-popup>
         <!-- 图六 -->
         <van-cell @click="showPopup16" class="tinternation_img">
-          <img src="./assets/h5/ls_45.jpg" alt />
+          <img src="./assets/ls_45.gif" alt />
         </van-cell>
         <van-popup v-model="flag16" class="tinternation_detail">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img src="./assets/h5/ls_45.jpg" alt />
+              <img src="./assets/big_img/ls_45.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_34.jpg" alt />
+              <img src="./assets/big_img/ls_34.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_36.jpg" alt />
+              <img src="./assets/big_img/ls_36.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_38.jpg" alt />
+              <img src="./assets/big_img/ls_38.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_40.jpg" alt />
+              <img src="./assets/big_img/ls_40.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_42.jpg" alt />
+              <img src="./assets/big_img/ls_42.jpg" alt />
             </van-swipe-item>
           </van-swipe>
         </van-popup>
         <!-- 图四 -->
         <van-cell @click="showPopup14" class="tinternation_img">
-          <img src="./assets/h5/ls_40.jpg" alt />
+          <img src="./assets/ls_40.gif" alt />
         </van-cell>
         <van-popup v-model="flag14" class="tinternation_detail">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img src="./assets/h5/ls_40.jpg" alt />
+              <img src="./assets/big_img/ls_40.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_42.jpg" alt />
+              <img src="./assets/big_img/ls_42.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_45.jpg" alt />
+              <img src="./assets/big_img/ls_45.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_34.jpg" alt />
+              <img src="./assets/big_img/ls_34.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_36.jpg" alt />
+              <img src="./assets/big_img/ls_36.jpg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_38.jpg" alt />
+              <img src="./assets/big_img/ls_38.jpg" alt />
             </van-swipe-item>
           </van-swipe>
         </van-popup>
@@ -1001,59 +1002,59 @@
       <div class="internation_national" @click="nation_clickMore">
         <p>国家级证书</p>
 
-        <van-icon name="arrow-down" />
+        <van-icon class="nation_icon" name="arrow-down" />
       </div>
 
       <div v-show="shownation" class="national_list">
         <!-- 图一 -->
         <van-cell @click="showPopup31" class="national_img">
-          <img src="./assets/h5/ls_55.jpeg" alt />
+          <img src="./assets/ls_55.gif" alt />
         </van-cell>
         <van-popup v-model="flag31" class="national_detail">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img src="./assets/h5/ls_55.jpeg" alt />
+              <img src="./assets/big_img/ls_55.jpeg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_56.jpeg" alt />
+              <img src="./assets/big_img/ls_56.jpeg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_57.jpeg" alt />
+              <img src="./assets/big_img/ls_54.jpeg" alt />
             </van-swipe-item>
           </van-swipe>
         </van-popup>
         <!-- 图二 -->
         <van-cell @click="showPopup32" class="national_img">
-          <img src="./assets/h5/ls_56.jpeg" alt />
+          <img src="./assets/ls_56.gif" alt />
         </van-cell>
         <van-popup v-model="flag32" class="national_detail">
           <van-swipe class="my-swipe" indicator-color="white">
             <van-swipe-item>
-              <img src="./assets/h5/ls_56.jpeg" alt />
+              <img src="./assets/big_img/ls_56.jpeg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_57.jpeg" alt />
+              <img src="./assets/big_img/ls_54.jpeg" alt />
             </van-swipe-item>
             <van-swipe-item>
-              <img src="./assets/h5/ls_55.jpeg" alt />
+              <img src="./assets/big_img/ls_55.jpeg" alt />
             </van-swipe-item>
           </van-swipe>
         </van-popup>
         <div class="national_lists">
           <!-- 图三 -->
           <van-cell @click="showPopup33" class="national_img">
-            <img src="./assets/h5/ls_57.jpeg" alt />
+            <img src="./assets/ls_54.jpg" alt />
           </van-cell>
           <van-popup v-model="flag33" class="national_detail">
             <van-swipe class="my-swipe" indicator-color="white">
               <van-swipe-item>
-                <img src="./assets/h5/ls_57.jpeg" alt />
+                <img src="./assets/big_img/ls_54.jpeg" alt />
               </van-swipe-item>
               <van-swipe-item>
-                <img src="./assets/h5/ls_55.jpeg" alt />
+                <img src="./assets/big_img/ls_55.jpeg" alt />
               </van-swipe-item>
               <van-swipe-item>
-                <img src="./assets/h5/ls_56.jpeg" alt />
+                <img src="./assets/big_img/ls_56.jpeg" alt />
               </van-swipe-item>
             </van-swipe>
           </van-popup>
@@ -1072,16 +1073,16 @@
     <div class="national sorft_national">
       <div class="internation_national" @click="soft_clickMore">
         <p>软件著作</p>
-        <van-icon name="arrow-down" />
+        <van-icon class="sorft_icon" name="arrow-down" />
       </div>
 
       <div v-show="soft_bool" class="national_list">
         <!-- 图一 -->
         <van-cell @click="showPopup41" class="national_img">
-          <img src="./assets/h5/ls_53.png" alt />
+          <img src="./assets/ls_53.png" alt />
         </van-cell>
         <van-popup v-model="flag41" class="national_detail sorft">
-          <img src="./assets/h5/ls_53.png" alt />
+          <img src="./assets/ls_53.png" alt />
         </van-popup>
       </div>
     </div>
@@ -1168,7 +1169,7 @@
       <div class="dialog_nation">
         <el-carousel :initial-index="prop_num_nation" :autoplay="false" trigger="click">
           <el-carousel-item>
-            <img class="img" src="./assets/big_img/ls_54.jpeg" alt />
+            <img class="img" src="./assets/ls_54.jpg" alt />
           </el-carousel-item>
           <el-carousel-item>
             <img class="img" src="./assets/big_img/ls_55.jpeg" alt />
@@ -1197,8 +1198,37 @@
 import "./assets/base.css";
 
 export default {
+  created() {
+    var width =
+      document.documentElement.clientWidth ||
+      document.body.clientWidth ||
+      window.innerWidth;
+    if (width >= 1200) {
+      document.documentElement.style.fontSize = "1px";
+    } else {
+      console.log(width);
+      document.documentElement.style.fontSize = 1 * (width / 640) + "px";
+    }
+  },
+  mounted() {
+    console.log(document.documentElement.style.fontSize);
+    window.addEventListener("scroll", this.handleScroll);
+    // console.log(document.documentElement.scrollTop); //获得当前滚动距离
+    this.cliten_width = document.body.clientWidth;
+    const that = this;
+    window.onresize = () => {
+      return (() => {
+        window.screenWidth = document.body.clientWidth;
+        that.screenWidth = window.screenWidth;
+      })();
+    };
+
+    this.aa = document.documentElement.style.fontSize;
+  },
+
   data() {
     return {
+      aa: 0,
       dialogVisible_nation: false,
       prop_num_nation: 0,
       prop_bool_nation: false, //以上国家级证书
@@ -1299,14 +1329,32 @@ export default {
   methods: {
     //软件
     soft_clickMore() {
+      if (this.soft_bool) {
+        document.querySelector(".sorft_icon").style.transform = "rotate(0deg)";
+      } else {
+        document.querySelector(".sorft_icon").style.transform =
+          "rotate(-180deg)";
+      }
       this.soft_bool = !this.soft_bool;
     },
     //国家
     nation_clickMore() {
+      if (this.shownation) {
+        document.querySelector(".nation_icon").style.transform = "rotate(0deg)";
+      } else {
+        document.querySelector(".nation_icon").style.transform =
+          "rotate(-180deg)";
+      }
       this.shownation = !this.shownation;
     },
     // 点击更多
     clickMore() {
+      if (this.showFlag) {
+        document.querySelector(".van_bqc").style.transform = "rotate(0deg)";
+      } else {
+        document.querySelector(".van_bqc").style.transform = "rotate(-180deg)";
+      }
+
       this.showFlag = !this.showFlag;
     },
     showPopup1() {
@@ -1365,16 +1413,19 @@ export default {
     sorft_propclose() {
       this.dialogVisible_create = false;
     },
+    //bqc弹出层的关闭回调
     handleClose() {
       this.dialogVisible = false;
       this.numIndex_carousel = 0;
       this.dialog_bool = false;
+      console.log(this.dialogVisible, "我是关闭回调");
     },
     //图片的点击事件
     interOne_cl(num) {
       this.dialog_bool = true;
       this.numIndex_carousel = num; //bqc
       this.dialogVisible = true;
+      console.log(this.dialogVisible, "开启弹窗");
     },
 
     //国家级证书
@@ -1385,7 +1436,7 @@ export default {
       this.prop_bool_nation = false;
     },
     nation(num) {
-      console.log(num);
+      // console.log(num);
       this.prop_num_nation = num;
       this.prop_bool_nation = true;
       this.dialogVisible_nation = true;
@@ -1433,383 +1484,12 @@ export default {
         document.documentElement.scrollTop >= 720 &&
         document.documentElement.scrollTop < 1136
       ) {
-        // this.alia += 1;
         this.home_colo = false;
         this.techon_colo = true;
         this.clcase_colo = false;
         this.about_colo = false;
         this.footer_colo = false;
-        // if (this.alia == 1) {
-        //   //技术应用部分(part1)
-        //   if (this.num_one_top < 0) {
-        //     // 高
-        //     var time_one_top = setInterval(() => {
-        //       this.num_one_top += 8;
-        //       if (this.num_one_top >= 0) {
-        //         clearInterval(time_one_top);
-        //       }
-        //     }, 1);
-        //   }
-        //   // 宽
-        //   if (this.num_one_left < 0) {
-        //     var time_one_left = setInterval(() => {
-        //       this.num_one_left += 8;
-        //       // clearInterval(time_one_left);
-        //       if (this.num_one_left >= 0) {
-        //         clearInterval(time_one_left);
-        //       }
-        //     }, 1);
-        //   }
-        //   //技术应用部分(part2)
-        //   if (this.num_two_top < 0) {
-        //     // 高
-        //     var time_two_top = setInterval(() => {
-        //       this.num_two_top += 8;
-        //       if (this.num_two_top >= 0) {
-        //         clearInterval(time_two_top);
-        //       }
-        //     }, 1);
-        //   }
-        //   //技术应用部分(part3)
-        //   if (this.num_three_top < 0) {
-        //     // 高
-        //     var time_three_top = setInterval(() => {
-        //       this.num_three_top += 8;
-        //       if (this.num_three_top >= 0) {
-        //         clearInterval(time_three_top);
-        //       }
-        //     }, 1);
-        //   }
-        //   // 宽
-        //   if (this.num_three_left > 820) {
-        //     var time_three_left = setInterval(() => {
-        //       this.num_three_left -= 8;
-        //       // clearInterval(time_three_left);
-        //       if (this.num_three_left <= 820) {
-        //         clearInterval(time_three_left);
-        //       }
-        //     }, 1);
-        //   }
-        //   //技术应用部分(part4)
-        //   if (this.num_fore_top > 430) {
-        //     // 高
-        //     var time_fore_top = setInterval(() => {
-        //       this.num_fore_top -= 8;
-        //       if (this.num_fore_top <= 430) {
-        //         clearInterval(time_fore_top);
-        //       }
-        //     }, 1);
-        //   }
-        //   // 宽
-        //   if (this.num_fore_left < 0) {
-        //     var time_fore_left = setInterval(() => {
-        //       this.num_fore_left += 8;
-        //       // clearInterval(time_fore_left);
-        //       if (this.num_fore_left >= 0) {
-        //         clearInterval(time_fore_left);
-        //       }
-        //     }, 1);
-        //   }
-        //   //技术应用部分(part5)
-        //   if (this.num_five_top > 430) {
-        //     // 高
-        //     var time_five_top = setInterval(() => {
-        //       this.num_five_top -= 8;
-        //       if (this.num_five_top <= 430) {
-        //         clearInterval(time_five_top);
-        //       }
-        //     }, 1);
-        //   }
-        //   //技术应用部分(part6)
-        //   if (this.num_six_top > 430) {
-        //     // 高
-        //     var time_six_top = setInterval(() => {
-        //       this.num_six_top -= 8;
-        //       if (this.num_six_top <= 430) {
-        //         clearInterval(time_six_top);
-        //       }
-        //     }, 1);
-        //   }
-        //   // 宽
-        //   if (this.num_six_left > 820) {
-        //     var time_six_left = setInterval(() => {
-        //       this.num_six_left -= 8;
-        //       if (this.num_six_left <= 820) {
-        //         clearInterval(time_six_left);
-        //       }
-        //     }, 1);
-        //   }
-        // }
       }
-      // else {
-      //////////////////////////////////////////////
-      // 技术应用部分(part1)
-      // if (this.num_one_top > -430) {
-      // 高
-      // var time_one_top_ = setInterval(() => {
-      // this.num_one_top -= 8;
-      // if (this.num_one_top <= -430) {
-      // clearInterval(time_one_top_);
-      // }
-      // }, 1);
-      // }
-      // 宽
-      // if (this.num_one_left > -380) {
-      // var time_one_left_ = setInterval(() => {
-      // this.num_one_left -= 8;
-      // clearInterval(time_one_left_);
-      // if (this.num_one_left <= -380) {
-      // clearInterval(time_one_left_);
-      // }
-      // }, 1);
-      // }
-      // 技术应用部分(part2)
-      // if (this.num_two_top > -430) {
-      // 高
-      // var time_two_top_ = setInterval(() => {
-      // this.num_two_top -= 8;
-      // if (this.num_two_top <= -430) {
-      // clearInterval(time_two_top_);
-      // }
-      // }, 1);
-      // }
-      // 技术应用部分(part3)
-      // if (this.num_three_top > -430) {
-      // 高
-      // var time_three_top_ = setInterval(() => {
-      // this.num_three_top -= 8;
-      // if (this.num_three_top <= -430) {
-      // clearInterval(time_three_top_);
-      // }
-      // }, 1);
-      // }
-      // 宽
-      // if (this.num_three_left < 1200) {
-      // var time_three_left_ = setInterval(() => {
-      // this.num_three_left += 8;
-      // clearInterval(time_three_left_);
-      // if (this.num_three_left >= 1200) {
-      // clearInterval(time_three_left_);
-      // }
-      // }, 1);
-      // }
-      // 技术应用部分(part4)
-      // if (this.num_fore_top < 860) {
-      // 高
-      // var time_fore_top_ = setInterval(() => {
-      // this.num_fore_top += 8;
-      // if (this.num_fore_top >= 860) {
-      // clearInterval(time_fore_top_);
-      // }
-      // }, 1);
-      // }
-      // 宽
-      // if (this.num_fore_left > -380) {
-      // var time_fore_left_ = setInterval(() => {
-      // this.num_fore_left -= 8;
-      // clearInterval(time_fore_left_);
-      // if (this.num_fore_left <= -380) {
-      // clearInterval(time_fore_left_);
-      // }
-      // }, 1);
-      // }
-      // 技术应用部分(part5)
-      // if (this.num_five_top < 860) {
-      // 高
-      // var time_five_top_ = setInterval(() => {
-      // this.num_five_top += 8;
-      // if (this.num_five_top >= 860) {
-      // clearInterval(time_five_top_);
-      // }
-      // }, 1);
-      // }
-      // 技术应用部分(part6)
-      // if (this.num_six_top < 860) {
-      // 高
-      // var time_six_top_ = setInterval(() => {
-      // this.num_six_top += 8;
-      // if (this.num_six_top >= 860) {
-      // clearInterval(time_six_top_);
-      // }
-      // }, 1);
-      // }
-      // 宽
-      // if (this.num_six_left < 1200) {
-      // var time_six_left_ = setInterval(() => {
-      // this.num_six_left += 8;
-      // if (this.num_six_left >= 1200) {
-      // clearInterval(time_six_left_);
-      // }
-      // }, 1);
-      // }
-      // this.alia = 0;
-      // }
-      //关于我们部��动画
-      // if (document.documentElement.scrollTop >= 2185) {
-      //   console.log(this.about_num);
-      //   this.about_num += 1;
-      //   if (this.about_num == 1 ) {
-      //     //关于我们部分(part1)
-      //     if (this.n_one_top < 0) {
-      //       // 高
-      //       var ti_one_top_ = setInterval(() => {
-      //         this.n_one_top += 8;
-      //         if (this.n_one_top >= 0) {
-      //           clearInterval(ti_one_top_);
-      //         }
-      //       }, 1);
-      //     }
-      //     // 宽
-      //     if (this.n_one_left < 0) {
-      //       var ti_one_left_ = setInterval(() => {
-      //         this.n_one_left += 8;
-      //         if (this.n_one_left >= 0) {
-      //           clearInterval(ti_one_left_);
-      //         }
-      //       }, 1);
-      //     }
-      //     //关于我们部分(part2)
-      //     if (this.n_two_top < 0) {
-      //       // 高
-      //       var ti_two_top_ = setInterval(() => {
-      //         this.n_two_top += 8;
-      //         if (this.n_two_top >= 0) {
-      //           clearInterval(ti_two_top_);
-      //         }
-      //       }, 1);
-      //     }
-      //     // 宽
-      //     if (this.n_two_left > 600) {
-      //       var ti_two_left_ = setInterval(() => {
-      //         this.n_two_left -= 8;
-      //         if (this.n_two_left <= 600) {
-      //           clearInterval(ti_two_left_);
-      //         }
-      //       }, 1);
-      //     }
-      //     //关于我们部分(part3)
-      //     if (this.n_three_top > 339) {
-      //       // 高
-      //       var ti_three_top_ = setInterval(() => {
-      //         this.n_three_top -= 8;
-      //         if (this.n_three_top <= 339) {
-      //           clearInterval(ti_three_top_);
-      //         }
-      //       }, 1);
-      //     }
-      //     // 宽
-      //     if (this.n_three_left < 0) {
-      //       var ti_three_left_ = setInterval(() => {
-      //         this.n_three_left += 8;
-      //         if (this.n_three_left >= 0) {
-      //           clearInterval(ti_three_left_);
-      //         }
-      //       }, 1);
-      //     }
-      //     //关于我们部分(part4)
-      //     if (this.n_fore_top > 339) {
-      //       // 高
-      //       var ti_fore_top_ = setInterval(() => {
-      //         this.n_fore_top -= 8;
-      //         if (this.n_fore_top <= 339) {
-      //           clearInterval(ti_fore_top_);
-      //         }
-      //       }, 1);
-      //     }
-      //     // 宽
-      //     if (this.n_fore_left > 600) {
-      //       var ti_fore_left_ = setInterval(() => {
-      //         this.n_fore_left -= 8;
-      //         if (this.n_fore_left <= 600) {
-      //           clearInterval(ti_fore_left_);
-      //         }
-      //       }, 1);
-      //     }
-      //   }
-      // }
-      // else {
-      // this.about_num = 0;
-      // 关于我们部分(part1)
-      // if (this.n_one_top > -339) {
-      // clearInterval(ti_one_top_);
-
-      // 高
-      // var tim_one_top_ = setInterval(() => {
-      // this.n_one_top -= 8;
-      // if (this.n_one_top <= -339) {
-      // clearInterval(tim_one_top_);
-      // }
-      // }, 1);
-      // }
-      // 宽
-      // if (this.n_one_left > -600) {
-      // clearInterval(ti_one_left_);
-
-      // var tim_one_left_ = setInterval(() => {
-      // this.n_one_left -= 8;
-      // if (this.n_one_left <= -600) {
-      // clearInterval(tim_one_left_);
-      // }
-      // }, 1);
-      // }
-      // 关于我们部分(part2)
-      // if (this.n_two_top > -339) {
-      // 高
-      // var tim_two_top_ = setInterval(() => {
-      // this.n_two_top -= 8;
-      // if (this.n_two_top <= -339) {
-      // clearInterval(tim_two_top_);
-      // }
-      // }, 1);
-      // }
-      // 宽
-      // if (this.n_two_left < 1200) {
-      // var tim_two_left_ = setInterval(() => {
-      // this.n_two_left += 8;
-      // if (this.n_two_left >= 1200) {
-      // clearInterval(tim_two_left_);
-      // }
-      // }, 1);
-      // }
-      // 关于我们部分(part3)
-      // if (this.n_three_top < 678) {
-      // 高
-      // var tim_three_top_ = setInterval(() => {
-      // this.n_three_top += 8;
-      // if (this.n_three_top >= 678) {
-      // clearInterval(tim_three_top_);
-      // }
-      // }, 1);
-      // }
-      // 宽
-      // if (this.n_three_left < -600) {
-      // var tim_three_left_ = setInterval(() => {
-      // this.n_three_left -= 8;
-      // if (this.n_three_left >= -600) {
-      // clearInterval(tim_three_left_);
-      // }
-      // }, 1);
-      // }
-      // 关于我们部分(part4)
-      // if (this.n_fore_top < 678) {
-      // 高
-      // var tim_fore_top_ = setInterval(() => {
-      // this.n_fore_top += 8;
-      // if (this.n_fore_top >= 678) {
-      // clearInterval(tim_fore_top_);
-      // }
-      // }, 1);
-      // }
-      // 宽
-      // if (this.n_fore_left < 1200) {
-      // var tim_fore_left_ = setInterval(() => {
-      // this.n_fore_left += 8;
-      // if (this.n_fore_left >= 1200) {
-      // clearInterval(tim_fore_left_);
-      // }
-      // }, 1);
-      // }
-      // }
 
       this.direct_list.shift();
       this.direct_list.push(document.documentElement.scrollTop);
@@ -2032,8 +1712,8 @@ export default {
         5;
 
       let num = document.documentElement.scrollTop;
-      console.log(offset);
-      console.log(num);
+      // console.log(offset);
+      // console.log(num);
       if (num < offset) {
         //在技术应用上
         var time_top = setInterval(() => {
@@ -2100,7 +1780,7 @@ export default {
       this.footer_colo = false;
     },
     about_h5() {
-      console.log(document.documentElement.offsetHeight);
+      // console.log(document.documentElement.offsetHeight);
       var num_suiji = 0;
       if (document.documentElement.offsetHeight >= 1024) {
         num_suiji = 150;
@@ -2129,7 +1809,7 @@ export default {
             clearInterval(time_top);
           }
           window.scrollTo(0, num);
-          console.log(num);
+          // console.log(num);
         }, 1);
       } else {
         var time_bottom = setInterval(() => {
@@ -2203,27 +1883,16 @@ export default {
       this.footer_colo = true;
     }
   },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-    console.log(document.documentElement.scrollTop); //获得当前滚动距离
-    this.cliten_width = document.body.clientWidth;
-    const that = this;
-    window.onresize = () => {
-      return (() => {
-        window.screenWidth = document.body.clientWidth;
-        that.screenWidth = window.screenWidth;
-      })();
-    };
-  },
+
   beforeDestroy() {
     // window.removeEventListener('scroll', this.handleScroll);
   },
-  
-  watch: {
-    screenWidth(newvalue, older) {
-      console.log(newvalue, older);
-      console.log("变化了");
 
+  watch: {
+    screenWidth() {
+      // console.log(newvalue, older);
+      // console.log("变化了");
+      console.log(navigator.userAgent);
       if (
         /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) &&
         this.pc_h5 == 1
@@ -2296,26 +1965,32 @@ export default {
   .content {
     width: 100%;
   }
-  .home {
-    height: 80rem;
-    position: fixed;
-    // position: relative;
+  .nav {
+    width: 100%;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    // border-radius: 20rem;
+    position: fixed;
     z-index: 99;
-    width: 100%;
+  }
+  .home {
+    height: 80rem;
+    display: flex;
+    width: 1200rem;
+    justify-content: space-between;
+    align-items: center;
     .login {
       // position: absolute;
       // top: 50%;
       // transform: translateY(-50%);
-      margin-right: 230rem;
     }
     .right {
       font-size: 16rem;
-      width: 726px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 726rem;
       span {
         margin-left: 84rem;
         cursor: pointer;
@@ -2396,30 +2071,7 @@ export default {
       }
     }
   }
-  // //banner图
-  // .banner {
-  //   position: relative;
-  // }
-  // .carousel {
-  //   position: absolute;
-  //   z-index: 9;
-  //   left: 50%;
-  //   transform: translate(-50%);
-  //   bottom: 20rem;
-  //   width: 72rem;
-  //   display: flex;
 
-  //   li:nth-child(2) {
-  //     margin: 0 18rem;
-  //   }
-  //   li {
-  //     background-color: #d9d9d9;
-  //     cursor: pointer;
-  //     width: 12rem;
-  //     height: 12rem;
-  //     border-radius: 6rem;
-  //   }
-  // }
   //实用案例
   .case_pc {
     .case {
@@ -2721,7 +2373,6 @@ export default {
 }
 
 .dialog {
-  height: 150%;
   .el-dialog__header {
     text-align: center;
   }
@@ -2733,7 +2384,6 @@ export default {
   }
 }
 .el-dialog__wrapper {
-  position: relative;
   .el-dialog {
     width: 80%;
     position: absolute;
@@ -2773,7 +2423,7 @@ export default {
     // left: 50%;
 
     // transform: translate(-50%);
-      height: 90vh;
+    height: 90vh;
 
     .dialog_nation {
       height: 80vh;
@@ -2799,7 +2449,6 @@ export default {
 
 //软件著作的弹出层
 .sorft_dialog {
-  position: relative;
   .el-dialog {
     width: 80%;
     position: absolute;
@@ -2809,7 +2458,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-      height: 90vh;
+    height: 90vh;
 
     .el-dialog__body {
       height: 85vh;
@@ -3231,8 +2880,17 @@ export default {
     }
     .tinternation_detail {
       width: 80%;
+      height: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .van-swipe-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       img {
-        width: 100%;
+        width: 90%;
       }
     }
   }
@@ -3246,7 +2904,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+
     .van-icon {
+      transition: all 1s;
       font-size: 40rem;
     }
   }
@@ -3273,9 +2934,23 @@ export default {
       }
     }
     .national_detail {
-      width: 80%;
-      img {
-        width: 100%;
+      width: 90%;
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .van-swipe__track {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .van-swipe-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 95%;
+          }
+        }
       }
     }
   }
@@ -3291,7 +2966,7 @@ export default {
       }
     }
     .national_detail {
-      width: 80%;
+      width: 90%;
 
       img {
         width: 100%;
@@ -3427,9 +3102,26 @@ export default {
   margin-top: 0rem !important;
 }
 .sorft {
-  width: 80%;
+  width: 90%;
+  padding: 20rem;
   img {
     width: 100%;
+  }
+}
+
+.el-dropdown-menu__item span {
+  padding-left: 30rem !important;
+}
+
+.van-cell::after {
+  border: 0 !important;
+}
+
+.my-swipe {
+  width: 100%;
+  height: 100%;
+  .van-swipe__track {
+    height: 100%;
   }
 }
 </style>

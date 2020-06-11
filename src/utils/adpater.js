@@ -11,12 +11,12 @@
       //   }else{
       //     document.querySelector("html").style.width =  "1200px"
       //   }
-      console.log(clientWidth);
+      // console.log(clientWidth);
       if (clientWidth >= 1200) {
         // window.location.reload()
 
         // 电脑端
-        docEl.style.fontSize = '1px';
+        docEl.style.fontSize = '100px';
         document.querySelector(".home_h5").style.display = "none"
         document.querySelector(".home").style.display = "flex"
         document.querySelector(".swipe").style.display = "none"
@@ -28,11 +28,11 @@
         document.querySelector(".national_h5 ").style.display = "none"
         document.querySelector(".sorft_national").style.display = "none"
         document.querySelector(".footer_h5").style.display = "none"
-        console.log("电脑端");   
+        // console.log("电脑端");   
       } else {
         // 手机端
         // window.location.reload();
-        docEl.style.fontSize = 1 * (clientWidth / 640) + 'px';
+        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
         document.querySelector(".banner_carousel").style.height = document.querySelector(".content").offsetHeight + "px"
         document.querySelector(".home").style.display = "none"
         document.querySelector(".home_h5").style.display = "flex"

@@ -22,7 +22,10 @@ Vue.use(Vant)
 Vue.use(VueKeepScrollPosition)
 Vue.config.productionTip = false
 
-new Vue({
+ var vue =new Vue({
   router,
   render: h => h(App),
 }).$mount('#app')
+
+
+export default vue
